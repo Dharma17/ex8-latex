@@ -9,7 +9,8 @@
 /* Defines */
 #define TAM 100 /* Quantidade de numeros sorteados */
 
-void fInsertion_sort(int *pVetor);
+void fInsertion_Sort(int *pVetor);
+
 
 int main()
 {
