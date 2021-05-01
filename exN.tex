@@ -21,7 +21,8 @@
 % resumo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 
-Vamos comparar os algoritmos \textit{xsort} e \textit{ysort} para bla bla.
+Vamos comparar os algoritmos \textit{Inserction Sort} e \textit{Quick Sort}.
+
 Para compilar o PDF a partir do TEX use o comando:
 
 \begin{enumerate}
@@ -39,14 +40,21 @@ Este é o fim do resumo.
 % seção de introdução %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introdução ao métodos de ordenação}
 
-Métodos de ordenação tem a principal função de...
+    Métodos de ordenação tem a principal função reorganizar um conjunto de elementos de uma sequência. O objetivo da ordenação é simplificar a recuperação de dados de uma lista. Essas técnicas proporcionam a verificação de como um algoritmo se comporta quando é executado, cada um deles possui uma vantagem sobre os outros métodos.
 
-O algoritmo \textit{Tal-e-qual} trabalha percorrendo uma árvore tal tal e tal.
+    Os algoritmos de ordenação mais comuns são: \textit{Insertion sort},  \textit{Quick sort},  \textit{Selection sort},  \textit{Bubble sort},  \textit{Merge sort}, dentre outros. De modo simplificado explicaremos a funcionalidade de cada um desses, abordando de forma mais detalhada o \textit{Insertion sort} e o \textit{Quick sort}.
+
+    O algoritmo \textit{Selection sort} consiste em passar o menor valor do vetor para a primeira posição ou a última, dependendo da ordem requerida, depois o segundo menor valor para a segunda posição e assim por diante. Ele compara um número a partir do primeiro com o da sua direita, quando encontra um número menor, o númeor escolhido ocupa a posição do menor número encontrado repetindo o processo até a lista etá toda ordenada.
+    
+    O \textit{Bubble sort} é o método mais simples, mas é o de menor eficiência. Esse algoritmo corresponde a pegar cada elemento da posição i e comparar com o elemento da posição i+1, ou seja, o elemento da posição 2, que por vez será comparado com o elemento da posição 3, se ele for maior que o da posição 3 eles trocam de lugar, até que a lista esteja organizada. Esse tipo não é recomendado para listas muito grandes pois o processo de execução pode ser bastante demorado.
+    
+    O método de ordenação \textit{Merge sort} divide o problema em pedaços menores, resolve cada pedaço desse e junta os resultados. O vetor será dividido em duas partes iguais, que serão cada uma divididas em duas partes, e assim até ficar um ou dois elementos cuja ordenação é insignificante. Para juntar as partes ordenadas os dois elementos de cada parte são separados e o menor deles é selecionado e retirado de sua parte. Em seguida os menores entre os restantes são comparados e assim se prossegue até juntar as partes.
+
 
 % seção do primeiro algoritmo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{O \textit{BubbleSort}}
+\section{O \textit{Insertion Sort}}
 
-O algoritmo \emph{Xsort} trabalha fazendo uma varredura na ...
+O algoritmo \emph{Insertion sort} trabalha fazendo uma varredura na ...
 
 \begin{figure}[ht]
 \centering
