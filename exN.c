@@ -1,4 +1,4 @@
-/* Bubble Sort  */
+/* Insertion Sort */
 
 /* Bibliotecas */
 #include<stdio.h>
@@ -7,47 +7,54 @@
 #include<time.h>
 
 /* Defines */
-#define NUM_MAX 100 /* Numeros sorteaveis: Entre 0 e NUM_MAX */
-#define TAM_INT 100 /* Quantidade de numeros sorteados       */
+#define TAM 100 /* Quantidade de numeros sorteados */
 
-int main(void)
+void fInsertion_sort(int *pVetor);
+
+int main()
 {
-    int numero[TAM_INT]; /* Vetor que armazena os numeros */
-    int loop_valor, loop_crescente; /* Variaveis dos Loop */
-    int num_aux;  /* Numero auxiliar da ordenacao*/
-    
-    srand(time(NULL)+getpid()); /* Tornando a funcao rand() totalmente aleatoria */
-    
-    /* Loop de preenchimento dos vetores */
-    for(loop_valor = 0;loop_valor < TAM_INT; loop_valor++)
+    int vVetor[TAM];
+    int vAux;
+
+    printf("***LISTA DESORDENADA: \n");
+
+    srand(time(NULL));
+    for(vAux=0; vAux<TAM; vAux++)
     {
-        numero[loop_valor] = rand()%NUM_MAX;
-        printf("Numero[%d] = %d\n",loop_valor,numero[loop_valor]);
+        vVetor[AUX] = (rand() % 90) +10; /*Preenche o vetor com valores aleatorios de 10 ate 99;*/
+        printf("%d \n", vVetor[AUX]);
     }
 
-    /* Loop responsavel pela organizacao dos numeros em ordem crescente */    
-    for (loop_valor = 0; loop_valor < TAM_INT; loop_valor++)
+    fInsertion_Sort(vVetor); /*Chama a funcao de ordenacao*/
+
+    printf("\n\n*** LISTA ORDENADA: \n");
+    for(vAux=0; vAux<TAM; vAux++)
     {
-        for (loop_crescente = loop_valor + 1; loop_crescente < TAM_INT; loop_crescente++)
-        {
-            /* Mudando valor de ordem caso a condicao seja verdadeira */
-            if (numero[loop_valor] > numero[loop_crescente])
-            {
-                num_aux =  numero[loop_valor];
-                numero[loop_valor] = numero[loop_crescente];
-                numero[loop_crescente] = num_aux;
-            }
-        }    
-   }
-   
-   /* Apresentacao dos numeros em ordem crescente */
-   printf("A ordem crescente eh: \n");
+        printf("%d \n", vVetor[AUX]);
+    }
 
-   for(loop_valor = 0;loop_valor < TAM_INT; loop_valor++)
-   {
-       printf("lugar %2d  = %d; \n",loop_valor+1,numero[loop_valor]);
-   }
-
-   return EXIT_SUCCESS;
+    printf("\n\n");
+    system("pause");
 }
 
+void fInsertion_Sort(int *pVetor)
+{
+    int vAux;
+    int vTemp;
+    int vTroca;
+
+    for(vAux=1; vAux<TAM; vAux++)
+    {
+        vTemp = vAux;
+        while(pVetor[vTemp] < pVetor[vTemp-1])
+        {
+            vTroca = pVetor[vTemp];
+            pVetor[vTemp] = pVetor[vTemp-1];
+            pVetor[vTemp-1] = vTroca;
+            vTemp--;
+
+            if(vTemp == 0
+                    break;
+        }
+    }
+}
