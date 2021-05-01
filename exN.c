@@ -53,7 +53,7 @@ void fInsertion_Sort(int *pVetor)
             pVetor[vTemp-1] = vTroca;
             vTemp--;
 
-            if(vTemp == 0
+            if(vTemp == 0)
                     break;
         }
     }
