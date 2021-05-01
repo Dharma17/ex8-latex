@@ -22,8 +22,8 @@ int main()
     srand(time(NULL));
     for(vAux=0; vAux<TAM; vAux++)
     {
-        vVetor[AUX] = (rand() % 90) +10; /*Preenche o vetor com valores aleatorios de 10 ate 99;*/
-        printf("%d \n", vVetor[AUX]);
+        vVetor[vAux] = (rand() % 90) +10; /*Preenche o vetor com valores aleatorios de 10 ate 99;*/
+        printf("%d \n", vVetor[vAux]);
     }
 
     fInsertion_Sort(vVetor); /*Chama a funcao de ordenacao*/
@@ -31,7 +31,7 @@ int main()
     printf("\n\n*** LISTA ORDENADA: \n");
     for(vAux=0; vAux<TAM; vAux++)
     {
-        printf("%d \n", vVetor[AUX]);
+        printf("%d \n", vVetor[vAux]);
     }
 
     printf("\n\n");
